@@ -1,4 +1,4 @@
-# Script Readme
+# ASXDataScraper Readme
 
 This Python script is designed to scrape data from the "ASX" subreddit using the Reddit API and the PRAW library. It retrieves information about the latest posts in the subreddit and saves the data in a structured format.
 
