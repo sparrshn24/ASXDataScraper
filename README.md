@@ -27,7 +27,3 @@ This Python script is designed to scrape data from the "ASX" subreddit using the
 6. It iterates over the new posts in the "ASX" subreddit and calls `getPostAsDict()` to get the post data.
 7. The script saves the post data to a specific path based on the post's timestamp.
 8. The script prints the post dictionary for each post retrieved.
-
-Note: The script assumes the existence of a custom module called "comments" that contains additional code. Please ensure the proper import and functionality of this module for the script to work correctly.
-
-Feel free to modify the script according to your specific requirements or add additional functionality as needed.
