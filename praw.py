@@ -1,23 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
 pip install praw
-
-
-# In[7]:
-
-
 from praw.models import MoreComments
 import requests
 import pandas as pd
 import pytz
 import json
 import praw
-
-
 from datetime import *
 from dateutil import parser
 from comments import *
@@ -31,16 +18,7 @@ reddit = praw.Reddit(
 )
 
 api = PushshiftAPI(reddit)
-
-
-# In[8]:
-
-
 subreddit = reddit.subreddit("ASX")
-
-
-# In[9]:
-
 
 def getPostAsDict(post):
     individual_post={}
@@ -55,11 +33,6 @@ def getPostAsDict(post):
     individual_post['Time']= datetime.fromtimestamp(post.created).strftime('%Y-%m-%dT%H:%M:%SZ')
                     
     return individual_post
-                
-
-
-# In[28]:
-
 
 def getResponse(post):
     response=[]
@@ -74,10 +47,6 @@ def getResponse(post):
                 response.append(block)
     return response    
 
-
-# In[ ]:
-
-
 date = datetime.now(timezone.utc)
 req_date = utc_datetime = datetime(2018,7,31, 12, 0, 0, tzinfo = pytz.utc)
 while(date>req_date):
@@ -90,16 +59,5 @@ while(date>req_date):
         path='ASX/'+time[0:13]
         
         print(post_dict)
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
