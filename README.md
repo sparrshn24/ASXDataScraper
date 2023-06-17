@@ -1,6 +1,6 @@
 # ASXDataScraper Readme
 
-This Python script is designed to scrape data from the "ASX" subreddit using the Reddit API and the PRAW library. It retrieves information about the latest posts in the subreddit and saves the data in a structured format.
+This Python script is designed to scrape data from the "ASX" subreddit using the Reddit API and the PRAW library. It retrieves information about the latest posts in the subreddit from 2018 to 2021 and saves the data in a structured format.
 
 ## Prerequisites
 - Python 3.x
@@ -22,7 +22,7 @@ This Python script is designed to scrape data from the "ASX" subreddit using the
 3. The script defines the target subreddit as "ASX" (Australian Securities Exchange).
 4. Two functions are defined to retrieve and process the post data:
    - `getPostAsDict(post)`: Takes a Reddit post object and returns a dictionary containing relevant information about the post, such as subreddit, URL, subtext, title, ID, response, upvote ratio, and time.
-   - `getResponse(post)`: Takes a Reddit post object and retrieves the response text from comments associated with the post.
+   - `getResponse(post)`: Takes a Reddit post object and retrieves the response text from all the comments associated with the post.
 5. The script sets the desired date range for data retrieval. In this example, it retrieves all posts from the current time until a specified date (`req_date`).
 6. It iterates over the new posts in the "ASX" subreddit and calls `getPostAsDict()` to get the post data.
 7. The script saves the post data to a specific path based on the post's timestamp.
